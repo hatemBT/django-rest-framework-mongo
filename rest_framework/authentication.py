@@ -6,7 +6,8 @@ from __future__ import unicode_literals
 import base64
 import binascii
 
-from django.contrib.auth import authenticate, get_user_model
+from django.contrib.auth import authenticate
+from app.core.users.models import User
 from django.middleware.csrf import CsrfViewMiddleware
 from django.utils.six import text_type
 from django.utils.translation import ugettext_lazy as _
@@ -90,7 +91,7 @@ class BasicAuthentication(BaseAuthentication):
         Authenticate the userid and password against username and password.
         """
         credentials = {
-            get_user_model().USERNAME_FIELD: userid,
+            User.USERNAME_FIELD: userid,
             'password': password
         }
         user = authenticate(**credentials)

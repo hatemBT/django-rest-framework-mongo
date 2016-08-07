@@ -73,7 +73,7 @@ DEFAULTS = {
     'VERSION_PARAM': 'version',
 
     # Authentication
-    'UNAUTHENTICATED_USER': 'django.contrib.auth.models.AnonymousUser',
+    'UNAUTHENTICATED_USER': None,
     'UNAUTHENTICATED_TOKEN': None,
 
     # View configuration
