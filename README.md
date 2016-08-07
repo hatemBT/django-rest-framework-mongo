@@ -1,4 +1,4 @@
-# [Django REST framework with Mongodb][docs]
+Django REST framework with Mongodb
 
 [![build-status-image]][travis]
 [![coverage-status-image]][codecov]
